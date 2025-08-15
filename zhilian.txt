@@ -1,3 +1,0 @@
-payload:
-  - 'jd.com'
-  - 'mars.jd.com'
