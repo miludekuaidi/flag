@@ -2,5 +2,4 @@ yaml图标
 https://cdn.jsdelivr.net/gh/用户名/项目名@main/Home/icon/No-ads-all.svg
 
 @via-blob是提取某些直链调用1dm+
-
-[点击这里访问GitHub](https://github.com)
+[via-blob](https://github.com/miludekuaidi/flag/tree/main/via-blob)
