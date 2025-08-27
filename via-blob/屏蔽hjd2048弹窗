@@ -1,0 +1,17 @@
+// ==UserScript==
+// @name         屏蔽hjd2048弹窗
+// @namespace    https://viayoo.com/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @run-at       document-end
+// @match        https://*/*
+// @grant        none
+// ==/UserScript==
+
+if(location.hostname.includes("hjd2048.com")){
+    window.alert = function(msg){
+        // 屏蔽掉所有 alert
+        console.log("hjd2048.com alert 被屏蔽:", msg);
+    };
+}
