@@ -1,0 +1,45 @@
+// ==UserScript==
+// @name         2048磁力复制调用迅雷添加链接
+// @namespace    https://viayoo.com/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @run-at       document-end
+// @match        https://*/*
+// @grant        none
+// ==/UserScript==
+
+// ==UserScript==
+// @name           2048磁力复制调用迅雷添加链接
+// @description    复制磁力时，自动调用迅雷的添加链接功能
+// @match          *://hjd2048.com/*
+// ==/UserScript==
+
+(function() {
+    function addLinkInXunlei(url) {
+        // 调用迅雷添加链接功能
+        // com.xunlei.downloadprovider → 迅雷安卓版包名
+        let intent = `intent:${url}#Intent;action=android.intent.action.VIEW;package=com.xunlei.downloadprovider;end`;
+        location.href = intent;
+    }
+
+    // 监听页面复制操作
+    document.addEventListener("copy", function(e) {
+        let text = window.getSelection().toString().trim();
+        if (text.startsWith("magnet:") || text.endsWith(".torrent")) {
+            e.preventDefault();
+            addLinkInXunlei(text);
+        }
+    });
+
+    // 拦截 1DM+ 包名
+    document.addEventListener("click", function(e) {
+        let a = e.target.closest("a");
+        if (!a) return;
+        if (a.href.includes("idm.internet.download.manager.plus")) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            return false;
+        }
+    }, true);
+})();
