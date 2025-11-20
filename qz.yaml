@@ -1,0 +1,30 @@
+# —————————
+# 基础设置
+mixed-port: 7890
+redir-port: 7891
+tproxy-port: 7895
+ipv6: true
+mode: rule
+allow-lan: true
+disable-keep-alive: true
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
+  experimental:
+  http-headers:
+    request:
+      - name: "User-Agent"
+        value: "Mozilla/5.0 (Linux; Android 15; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
+      - name: "Accept-Language"
+        value: "en-US,en;q=0.9"
+unified-delay: true  #统一延迟
+tcp-concurrent: true
+log-level: silent
+find-process-mode: always
+global-client-fingerprint: chrome
+external-controller: 0.0.0.0:9090
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+external-ui: "./Web/Zash/"
+secret: "" # 面板访问密码，如在公网访问建议设置
