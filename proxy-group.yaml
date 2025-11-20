@@ -1,0 +1,71 @@
+proxy-groups:
+ 
+  - name: 订阅更新
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Update.svg"
+    type: select
+    proxies:
+      - 香港节点
+      - 🇨🇳 共产党
+
+#APP分流组———————————————————————
+    
+  - name: TikTok/抖音
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/TikTok.svg"
+    <<: *proxy_groups
+    exclude-filter: "(?i)香港|HK|大陆|中国|CN"
+        
+  - name: Emby
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/rule@master/icon/color/emby.png"
+    <<: *proxy_groups
+    exclude-filter: "(?i)日本|美国|🇨🇳 共产党"
+    
+  - name: Telegram 
+    type: select
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Telegram.svg"
+    <<: *all_groups
+    exclude-filter: "(?i)美国|🇨🇳 共产党|xl"
+    
+  - name: AI
+    type: select
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/OpenAI.svg"
+    <<: *all_groups
+    exclude-filter: "(?i)香港|HK|大陆|中国|CN|良心狗|一分狗|xl"
+    
+  - name: YouTube
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/YouTube.svg"
+    type: select
+    <<: *proxy_groups
+     
+  - name: GG
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Google.svg"
+    <<: *proxy_groups
+    
+  - name: Steam
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Steam.svg"
+    <<: *proxy_groups
+
+  - name: DNS连接
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/DNS.svg"
+    <<: *proxy_groups
+    
+#小尾巴————————————————————
+  - name: 漏网之鱼
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/HBASE-copy.svg"
+    type: select
+    <<: *all_groups
+
+  - name: 广告拦截
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/No-ads-all.svg"
+    type: select
+    proxies:
+      - ⛔️ 拒绝连接
+      - 🌐 DNS_Hijack
+      - REJECT-DROP
+      - PASS #匹配规则 放行
+
+  - name: WebRTC
+    icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/WebRTC.svg"
+    type: select
+    proxies:
+      - ⛔️ 拒绝连接
+      - PASS
