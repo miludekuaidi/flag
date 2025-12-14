@@ -24,7 +24,7 @@ tcp-concurrent: true
 log-level: silent
 find-process-mode: always
 global-client-fingerprint: chrome
-external-controller: 0.0.0.0:9090
+external-controller: 0.0.0.0:9091
 external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 external-ui: "./Web/Zash/"
 secret: "" # 面板访问密码，如在公网访问建议设置
