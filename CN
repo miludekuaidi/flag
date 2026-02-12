@@ -1,0 +1,26 @@
+addons: &addons
+  type: http
+  port: 443
+  headers:
+    X-T5-Auth: 683556433
+    Host: 153.3.236.22:443
+    #With-At里面的混淆可以自己换其余不动
+    With-At: m.toutiao.com
+    User-Agent: baiduboxapp
+    
+proxies:
+  - { name: 公共域名, server: cloudnproxy.n.shifen.com, <<: *addons }
+  - { name: 广州移动, server: 183.240.98.84, <<: *addons }
+  - { name: 广州电信, server: 14.215.182.75, <<: *addons }
+  - { name: 广州联通, server: 163.177.17.6, <<: *addons }
+  - { name: 广州联通2, server: 163.177.17.189, <<: *addons }
+  - { name: 南京移动, server: 36.155.169.188, <<: *addons }
+  - { name: 南京联通, server: 153.3.237.117, <<: *addons }
+  - { name: 南京电信, server: 180.101.50.208, <<: *addons }
+  - { name: 南京电信2, server: 180.101.50.249, <<: *addons }
+  - { name: 北京电信, server: 220.181.111.189, <<: *addons }
+  - { name: 北京电信2, server: 220.181.33.174, <<: *addons }
+  - { name: 北京电信3, server: 220.181.7.1, <<: *addons }
+  - { name: 苏州联通, server: 157.0.146.158, <<: *addons }
+  - { name: 保定联通, server: 110.242.70.69, <<: *addons }
+  - { name: 保定联通2, server: 110.242.70.68, <<: *addons }
