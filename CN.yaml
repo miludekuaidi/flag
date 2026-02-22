@@ -5,7 +5,7 @@ addons: &addons
     X-T5-Auth: 683556433
     Host: 153.3.236.22:443
     #With-At里面的混淆可以自己换其余不动
-    With-At: m.toutiao.com
+    With-At: hytn.pan.wo.cn
     User-Agent: baiduboxapp
     
 proxies:
