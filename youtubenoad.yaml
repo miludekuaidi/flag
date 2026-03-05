@@ -1,0 +1,22 @@
+payload:
+  # YouTube Ads API
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,adservice.google.com,REJECT
+  - DOMAIN-SUFFIX,pagead2.googlesyndication.com,REJECT
+
+  # YouTube ad tracking
+  - DOMAIN-SUFFIX,youtubeadsystem.com,REJECT
+  - DOMAIN-SUFFIX,ytads.youtube.com,REJECT
+  - DOMAIN-SUFFIX,ads.youtube.com,REJECT
+
+  # Ad video requests
+  - URL-REGEX,^https?:\/\/(www\.)?youtube\.com\/api\/stats\/ads
+  - URL-REGEX,^https?:\/\/s\.youtube\.com\/api\/stats\/ads
+  - URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player\/ad
+  - URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event
+
+  # Banner ads
+  - DOMAIN-SUFFIX,ad.doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,partnerad.l.doubleclick.net,REJECT
